@@ -1,9 +1,24 @@
 <div class="container">
-  <h3>Send a message</h3>
-  <form action="/messages" method="post">
-    <input type="text" name="post[sender]" placeholder="sender"><br>
-    <input type="text" name="post[recipient]" placeholder="recipient"><br>
-    <input type="text" name="post[message]" placeholder="message"><br>
-    <input type="submit" value="Send your message">
-  </form>
+	<div id="send_message">
+		<form action="/messages" method="post">
+			<label for="send_message_form">Send a message:</label><br>
+			<input type="text" name="post[sender]" placeholder="sender"><br>
+			<input type="text" name="post[recipient]" placeholder="recipient"><br>
+			<input type="text" name="post[message]" placeholder="message"><br>
+			<input type="submit" value="Send your message">
+		</form>
+	</div>
+
+	<div id="make_call">
+		<form action="/voice" method="get">
+			<input type="submit" value="Call McArthur">
+		</form>
+	</div>
+
+	<div id="see_calls">
+		<form action="/call_log" method="get">
+			<input type="submit" value="See all your calls">
+		</form>
+	</div>
+
 </div>

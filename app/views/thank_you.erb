@@ -1,3 +1,13 @@
-<h1>Thank you for sending your message!</h1>
+<h1>Thank you for using our app!</h1>
 
-<h3><a href="/">Go send another message</h3>
+<div id="call_log">
+	<% if @calls %>
+		<% @calls.each do |call| %>
+			<p>From: <%= call.from %><p>
+			<p>To: <%= call.to %><p>
+			<br>
+		<% end %>
+	<% end %>
+</div>
+
+<h3><a href="/">Go do more stuff</a></h3>
